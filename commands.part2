@@ -1,0 +1,24 @@
+Build Container
+docker-compose build web
+
+
+Initialize and migrate/upgrade Database
+docker-compose run web flask db init      # To initialize migrations for the first time
+docker-compose run web flask db migrate   # To create a new migration based on model changes
+docker-compose run web flask db upgrade   # To apply the migrations to the database
+
+
+
+To Run
+docker-compose up
+
+
+To Exit
+in another terminal docker-compose down
+
+
+Run Flask-Shell
+docker-compose run web flask shell
+
+View Logs
+docker-compose logs web

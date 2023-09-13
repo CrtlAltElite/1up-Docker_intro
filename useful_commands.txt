@@ -1,0 +1,39 @@
+Container Management:
+    docker ps: List running containers.
+    docker ps -a: List all containers (both running and stopped).
+    docker stop <CONTAINER_ID/NAME>: Stop a running container.
+    docker start <CONTAINER_ID/NAME>: Start a stopped container.
+    docker restart <CONTAINER_ID/NAME>: Restart a container.
+    docker rm <CONTAINER_ID/NAME>: Remove a stopped container.
+    docker logs <CONTAINER_ID/NAME>: View the logs of a container.
+    docker exec -it <CONTAINER_ID/NAME> <COMMAND>: Execute a command in a running container. For instance, docker exec -it my_container bash would open a bash shell inside the container named "my_container".
+
+Image Management:
+    docker images: List all local images.
+    docker rmi <IMAGE_ID/NAME>: Remove an image.
+    docker pull <IMAGE_NAME>: Download an image from Docker Hub or another registry.
+    docker push <IMAGE_NAME>: Push an image to a registry (assuming you have the right permissions).
+
+Network Management:
+    docker network ls: List all Docker networks.
+    docker network create <NETWORK_NAME>: Create a new network.
+    docker network rm <NETWORK_NAME>: Remove a network.
+    docker network inspect <NETWORK_NAME>: View detailed information about a network.
+
+Volume Management:
+    docker volume ls: List all volumes.
+    docker volume create <VOLUME_NAME>: Create a new volume.
+    docker volume rm <VOLUME_NAME>: Remove a volume.
+    docker volume inspect <VOLUME_NAME>: View detailed information about a volume.
+Docker System:
+    docker info: Display system-wide information about Docker.
+    docker version: Show the Docker version information.
+    docker system df: Display disk usage by Docker.
+    docker system prune: Clean up dangling resources (unused containers, networks, images, and caches). This can help reclaim disk space.
+
+
+Docker Compose (used for multi-container orchestration):
+    docker-compose up: Start services defined in docker-compose.yml.
+    docker-compose down: Stop and remove all services defined in docker-compose.yml.
+    docker-compose logs: View logs from services.
+    docker-compose ps: List services and their status.
