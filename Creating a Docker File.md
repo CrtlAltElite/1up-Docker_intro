@@ -1,5 +1,6 @@
-The docker-compose.yml file is a YAML-formatted configuration file that defines all the services, networks, and volumes for a Docker application. It essentially acts as a "script" that Docker Compose uses to run multiple containers as a single service.
+# Understanding `docker-compose.yml`
 
+The `docker-compose.yml` file is a YAML-formatted configuration file that defines all the services, networks, and volumes for a Docker application. It essentially acts as a "script" that Docker Compose uses to run multiple containers as a single service.
 
 ## Anatomy of `docker-compose.yml`
 
@@ -9,15 +10,15 @@ The file is divided into several sections:
 
 This field specifies the version of the Docker Compose file format. It helps ensure compatibility with specific Docker Engine versions.
 
-yaml
+```yaml
 version: '3'
-
+```
 
 ### Services
 
 This section is the heart of the `docker-compose.yml` file, where you define each service (container) you want to run.
 
-yaml
+```yaml
 services:
   web:
     image: nginx:alpine
@@ -27,7 +28,7 @@ services:
     build: ./app
     environment:
       - KEY=VALUE
-
+```
 
 #### Fields:
 
@@ -43,11 +44,11 @@ services:
 
 This section defines custom networks that services or containers can use for communication.
 
-yaml
+```yaml
 networks:
   my-network:
     driver: bridge
-
+```
 
 #### Fields:
 
@@ -57,11 +58,11 @@ networks:
 
 This section defines volumes that can be used by services to store data.
 
-yaml
+```yaml
 volumes:
   my-volume:
     driver: local
-
+```
 
 #### Fields:
 
@@ -89,7 +90,7 @@ volumes:
 
 Here's a simple example that includes most of these elements:
 
-yaml
+```yaml
 version: '3'
 services:
   web:
@@ -108,7 +109,7 @@ networks:
 volumes:
   my-data:
     driver: local
-
+```
 
 In this example, we have a web service using the `nginx:alpine` image and an app service built from a local `Dockerfile`. The app service also has an environment variable and a volume for data persistence. Both services are on a custom bridge network.
 
