@@ -1,9 +1,9 @@
 https://hub.docker.com/
-Use your user name from here to login with the command
+Use your USERNAME from here to login with the command
 
 docker login
 
 When ready to push to dochub
 
-tag username/<APP_NAME> 
+tag <USERNAME>/<APP_NAME> 
 docker tag <APP_NAME>:latest <USERNAME>/<APP_NAME>:latest
